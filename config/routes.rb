@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'users#new'
 
-  resources :users, only: :show
+  resources :users, only: %i[edit update]
 
   # sign up
   get 'signup' => 'users#new'

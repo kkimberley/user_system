@@ -1,5 +1,4 @@
 <h1> Welcome To Signup Page<h1>
-<p><%= flash[:notice] %></p>
 
 <%= form_for @user do |f| %>
   Email: <%= f.text_field :email %>
@@ -7,3 +6,4 @@
   Password Confirmation: <%= f.password_field :password_confirmation %>
   <%= f.submit 'Submit' %>
 <% end %>
+

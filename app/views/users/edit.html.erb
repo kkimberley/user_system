@@ -1,0 +1,9 @@
+<h1> Welcome To profile Page<h1>
+
+<%= form_for @user do |f| %>
+  Email: <%= f.text_field :email, disabled: true %>
+  Username: <%= f.text_field :username, value: @user.username %>
+  Password: <%= f.password_field :password %>
+  <%= f.submit 'Submit' %>
+<% end %>
+
