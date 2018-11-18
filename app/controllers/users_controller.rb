@@ -11,9 +11,11 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to user_path(user), notice: 'signup successfully.'
+
+      UserMailer.welcome_mail(user).deliver
+      redirect_to user_path(user)
     else
-      redirect_to root_path, notice: 'signup fail....'
+      redirect_to root_path, notice: "signup fail, #{user.errors.messages}"
     end
   end
 
