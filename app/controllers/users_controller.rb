@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorize
+
   def edit
     @user = User.find params[:id]
   end

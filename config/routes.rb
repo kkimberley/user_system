@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root to: 'users#new'
+  root to: 'sessions#new'
 
-  resources :users, only: %i[edit update]
-
-  # sign up
-  get 'signup' => 'users#new'
-  post '/users' => 'users#create'
+  resources :users
+  resources :sessions
 end
