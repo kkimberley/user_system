@@ -1,6 +1,9 @@
-<h1>Forgot Password Page<h1>
+<div class="mx-auto" style="width: 500px;">
+  <h1>Forgot Password Page</h1>
 
-<%= form_tag password_resets_path do %>
-  Email: <%= text_field_tag :email %>
-  <%= submit_tag 'Submit' %>
-<% end %>
+  <%= form_tag password_resets_path do %>
+    Email: <%= text_field_tag :email %>
+    <%= submit_tag 'Submit', class: 'btn btn-warning' %>
+  <% end %>
+</div>
+
